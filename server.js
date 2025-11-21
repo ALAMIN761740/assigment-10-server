@@ -10,12 +10,10 @@ const port = 4000;
 app.use(express.json())
 // app.use(cors())
 
-
-
 app.use(cors());
-// db connected 
+
 connectdb()
-// add router
+
 app.use('/api/taskroute', taskroute)
 
 app.get("/", (req, res) => {
